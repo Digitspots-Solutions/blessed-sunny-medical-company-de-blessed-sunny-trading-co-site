@@ -1,0 +1,42 @@
+{
+  "businessName": "Blessed Sunny Medical Company & De Blessed Sunny Trading Co.",
+  "industry": "Medical Manufacturing & Trading",
+  "tone": "Professional, Trustworthy, Authoritative",
+  "tagline": "Excellence in Medical Manufacturing and Supply Solutions Across Nigeria",
+  "sections": [
+    {
+      "id": "hero",
+      "name": "Hero",
+      "copy": "BLESSED SUNNY MEDICAL COMPANY & DE BLESSED SUNNY TRADING CO.\n\nYour Trusted Partner in Medical Manufacturing and Supply\n\nWith our dual operations in medical manufacturing and trading, we deliver quality healthcare solutions that meet international standards while serving the Nigerian healthcare sector with integrity and excellence.",
+      "imagePrompt": "Modern Nigerian medical manufacturing facility with clean sterile production lines, professional Nigerian healthcare workers in white lab coats inspecting medical supplies, bright fluorescent lighting, stainless steel equipment, quality control stations, photorealistic, professional industrial photography style",
+      "layout": "centered"
+    },
+    {
+      "id": "about",
+      "name": "About Us",
+      "copy": "About Blessed Sunny Medical Company & De Blessed Sunny Trading Co.\n\nWe operate two complementary businesses serving Nigeria's healthcare sector. Blessed Sunny Medical Company specializes in the manufacturing of quality medical products, while De Blessed Sunny Trading Co. focuses on the distribution and supply of medical equipment and consumables.\n\nOur dual expertise allows us to maintain complete quality control from production to delivery, ensuring that healthcare providers across Nigeria receive reliable, affordable, and certified medical solutions. Located in Kaduna, we serve hospitals, clinics, pharmacies, and healthcare institutions nationwide.\n\nOur commitment to excellence, regulatory compliance, and customer satisfaction has positioned us as a dependable name in Nigeria's medical supply chain.",
+      "imagePrompt": "Professional Nigerian businesspeople in medical industry setting, modern warehouse with organized medical supplies on shelves, quality assurance team inspecting products, bright natural lighting through large windows, clean organized space, photorealistic corporate photography",
+      "layout": "split"
+    },
+    {
+      "id": "services",
+      "name": "Our Services",
+      "copy": "What We Offer\n\nMedical Manufacturing\nBlessed Sunny Medical Company produces a range of medical consumables and supplies using quality raw materials and adherence to strict manufacturing standards. Our production facility maintains hygiene protocols and quality assurance processes that meet regulatory requirements.\n\nMedical Trading & Distribution\nDe Blessed Sunny Trading Co. sources and supplies medical equipment, devices, and consumables from certified manufacturers. We maintain adequate inventory levels to ensure prompt delivery and competitive pricing for our clients.\n\nBulk Supply Solutions\nWe provide bulk supply contracts for hospitals, government health facilities, and large healthcare institutions. Our logistics network ensures timely delivery across Nigeria.\n\nQuality Assurance\nEvery product that leaves our facility undergoes rigorous quality control checks. We maintain proper documentation, certifications, and traceability for all our medical products.\n\nCustomer Support\nOur experienced team provides technical support, product training, and after-sales service to ensure optimal use of our medical supplies and equipment.",
+      "imagePrompt": "Split view collage of Nigerian medical facility operations: manufacturing floor with workers in protective gear, warehouse with organized medical inventory, delivery trucks with company branding, quality control laboratory with testing equipment, photorealistic documentary style photography",
+      "layout": "grid"
+    },
+    {
+      "id": "contact",
+      "name": "Contact Us",
+      "copy": "Get In Touch With Us\n\nReady to partner with a reliable medical manufacturing and supply company? Contact us today for product inquiries, bulk orders, or partnership opportunities.\n\nBLESSED SUNNY MEDICAL COMPANY\nDE BLESSED SUNNY TRADING CO.\n\nPp10 Warri Street by Kano Road\nKaduna, Nigeria\n\nPhone: +234 803 967 2303\nWhatsApp: Available for quick inquiries\n\nBusiness Hours:\nMonday - Friday: 8:00 AM - 5:00 PM\nSaturday: 9:00 AM - 2:00 PM\n\nWe respond to all inquiries within 24 hours and are committed to providing exceptional customer service to all our clients across Nigeria.",
+      "imagePrompt": "Professional Nigerian medical company office reception area, friendly receptionist at modern desk, medical product displays in background, comfortable waiting area, natural lighting, potted plants, clean professional environment, photorealistic architectural photography",
+      "layout": "centered"
+    }
+  ],
+  "contact": {
+    "phone": "+234 803 967 2303",
+    "email": "",
+    "address": "Pp10 Warri Street by Kano Road, Kaduna, Nigeria",
+    "whatsapp": "https://wa.me/2348039672303"
+  }
+}
