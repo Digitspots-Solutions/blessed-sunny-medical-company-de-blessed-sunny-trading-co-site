@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blessed Sunny Medical Company & De Blessed Sunny Trading Co. - Excellence in Medical Manufacturing and Supply Solutions Across Nigeria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #041840;
+            --color-accent: #0077c5;
+            --color-bg: #F0F6FC;
+            --color-text: #072048;
+            --color-surface: #0b2b6c;
+            --color-secondary-accent: #29bc76;
+            --font-display: 'Instrument Serif', serif;
+            --font-body: 'DM Sans', sans-serif;
+            --border-radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            line-height: 1.6;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle, rgba(4, 24, 64, 0.02) 1px, transparent 1px);
+            background-size: 20px 20px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(240, 246, 252, 0.85);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1.25rem 0;
+            box-shadow: 0 1px 3px rgba(4, 24, 64, 0.06);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            max-width: 400px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-text);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-accent);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+            z-index: 1001;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: var(--color-text);
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            right: -100%;
+            width: 300px;
+            height: calc(100vh - 70px);
+            background: var(--color-bg);
+            box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+            transition: right 0.3s ease;
+            z-index: 999;
+            padding: 2rem;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+        }
+
+        .mobile-menu ul li {
+            margin-bottom: 1.5rem;
+        }
+
+        .mobile-menu ul a {
+            text-decoration: none;
+            color: var(--color-text);
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            display: block;
+            padding: 0.5rem 0;
+        }
+
+        .mobile-menu ul a:hover {
+            color: var(--color-accent);
+        }
+
+        #hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            animation: fadeUp 0.6s ease forwards;
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.pexels.com/photos/33790192/pexels-photo-33790192.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+        }
+
+        #hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(4, 24, 64, 0.7);
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-content .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .hero-content p {
+            font-size: 1.15rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--color-accent);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 119, 197, 0.3);
+        }
+
+        .cta-button:hover {
+            background: var(--color-secondary-accent);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 119, 197, 0.4);
+        }
+
+        section {
+            padding: 80px 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        #about {
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.1s;
+        }
+
+        #services {
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.2s;
+        }
+
+        #contact {
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.3s;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 2.75rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--color-text);
+        }
+
+        .split-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .split-layout img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            box-shadow: 0 8px 24px rgba(4, 24, 64, 0.12);
+        }
+
+        .split-content h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .split-content p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(4, 24, 64, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(4, 24, 64, 0.15);
+        }
+
+        .service-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--color-text);
+        }
+
+        #contact {
+            background: white;
+            text-align: center;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-content h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-content p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-details {
+            background: var(--color-bg);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            margin-top: 2rem;
+            text-align: left;
+        }
+
+        .contact-details h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+
+        .contact-details p {
+            margin-bottom: 0.75rem;
+            font-size: 1.05rem;
+        }
+
+        .contact-details strong {
+            color: var(--color-primary);
+            font-weight: 500;
+        }
+
+        .contact-details a {
+            color: var(--color-accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-details a:hover {
+            color: var(--color-secondary-accent);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(37, 211, 102, 0.5);
+        }
+
+        .whatsapp-float svg {
+            width: 32px;
+            height: 32px;
+            fill: white;
+        }
+
+        footer {
+            background: var(--color-primary);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        footer p {
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-content h1 {
+                font-size: 2.75rem;
+            }
+
+            .hero-content .tagline {
+                font-size: 1.25rem;
+            }
+
+            .section-title {
+                font-size: 2.25rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .logo {
+                font-size: 1.1rem;
+                max-width: 250px;
+            }
+
+            section {
+                padding: 48px 0;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content .tagline {
+                font-size: 1.1rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.85rem;
+            }
+
+            .section-subtitle {
+                font-size: 1.05rem;
+            }
+
+            .split-layout {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .split-layout img {
+                height: 350px;
+            }
+
+            .split-content h2 {
+                font-size: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-content h2 {
+                font-size: 2rem;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 1.5rem;
+                right: 1.5rem;
+            }
+
+            .whatsapp-float svg {
+                width: 26px;
+                height: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">Blessed Sunny Medical Company & De Blessed Sunny Trading Co.</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>BLESSED SUNNY MEDICAL COMPANY & DE BLESSED SUNNY TRADING CO.</h1>
+            <p class="tagline">Your Trusted Partner in Medical Manufacturing and Supply</p>
+            <p>With our dual operations in medical manufacturing and trading, we deliver quality healthcare solutions that meet international standards while serving the Nigerian healthcare sector with integrity and excellence.</p>
+            <a href="#contact" class="cta-button">Get In Touch</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="split-layout">
+                <img src="https://images.pexels.com/photos/5452210/pexels-photo-5452210.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="About Blessed Sunny Medical Company">
+                <div class="split-content">
+                    <h2>About Blessed Sunny Medical Company & De Blessed Sunny Trading Co.</h2>
+                    <p>We operate two complementary businesses serving Nigeria's healthcare sector. Blessed Sunny Medical Company specializes in the manufacturing of quality medical products, while De Blessed Sunny Trading Co. focuses on the distribution and supply of medical equipment and consumables.</p>
+                    <p>Our dual expertise allows us to maintain complete quality control from production to delivery, ensuring that healthcare providers across Nigeria receive reliable, affordable, and certified medical solutions. Located in Kaduna, we serve hospitals, clinics, pharmacies, and healthcare institutions nationwide.</p>
+                    <p>Our commitment to excellence, regulatory compliance, and customer satisfaction has positioned us as a dependable name in Nigeria's medical supply chain.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">What We Offer</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Medical Manufacturing</h3>
+                    <p>Blessed Sunny Medical Company produces a range of medical consumables and supplies using quality raw materials and adherence to strict manufacturing standards. Our production facility maintains hygiene protocols and quality assurance processes that meet regulatory requirements.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Medical Trading & Distribution</h3>
+                    <p>De Blessed Sunny Trading Co. sources and supplies medical equipment, devices, and consumables from certified manufacturers. We maintain adequate inventory levels to ensure prompt delivery and competitive pricing for our clients.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Bulk Supply Solutions</h3>
+                    <p>We provide bulk supply contracts for hospitals, government health facilities, and large healthcare institutions. Our logistics network ensures timely delivery across Nigeria.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Quality Assurance</h3>
+                    <p>Every product that leaves our facility undergoes rigorous quality control checks. We maintain proper documentation, certifications, and traceability for all our medical products.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Customer Support</h3>
+                    <p>Our experienced team provides technical support, product training, and after-sales service to ensure optimal use of our medical supplies and equipment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>Get In Touch With Us</h2>
+                <p>Ready to partner with a reliable medical manufacturing and supply company? Contact us today for product inquiries, bulk orders, or partnership opportunities.</p>
+                <div class="contact-details">
+                    <h3>BLESSED SUNNY MEDICAL COMPANY<br>DE BLESSED SUNNY TRADING CO.</h3>
+                    <p><strong>Address:</strong> Pp10 Warri Street by Kano Road, Kaduna, Nigeria</p>
+                    <p><strong>Phone:</strong> <a href="tel:+2348039672303">+234 803 967 2303</a></p>
+                    <p><strong>WhatsApp:</strong> Available for quick inquiries</p>
+                    <p><strong>Business Hours:</strong><br>
+                    Monday - Friday: 8:00 AM - 5:00 PM<br>
+                    Saturday: 9:00 AM - 2:00 PM</p>
+                    <p>We respond to all inquiries within 24 hours and are committed to providing exceptional customer service to all our clients across Nigeria.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/2348039672303" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.051 1.352 1.349-5.046-0.319-0.525c-1.324-2.171-2.028-4.665-2.028-7.219 0-7.51 6.11-13.62 13.627-13.62s13.627 6.11 13.627 13.62c0 7.51-6.11 13.62-13.627 13.62zM21.954 19.135c-0.364-0.182-2.151-1.061-2.487-1.182s-0.576-0.182-0.818 0.182c-0.243 0.364-0.94 1.182-1.152 1.425s-0.425 0.273-0.789 0.091c-0.364-0.182-1.536-0.567-2.925-1.804-1.081-0.964-1.811-2.154-2.023-2.518s-0.022-0.561 0.159-0.742c0.164-0.164 0.364-0.425 0.546-0.637s0.243-0.364 0.364-0.607c0.121-0.243 0.061-0.455-0.030-0.637s-0.818-1.971-1.121-2.699c-0.295-0.709-0.594-0.612-0.818-0.624-0.212-0.011-0.455-0.013-0.697-0.013s-0.637 0.091-0.971 0.455c-0.334 0.364-1.273 1.243-1.273 3.032s1.303 3.517 1.485 3.759c0.182 0.243 2.567 3.916 6.218 5.492 0.868 0.375 1.546 0.599 2.073 0.767 0.873 0.277 1.667 0.238 2.295 0.144 0.7-0.105 2.151-0.879 2.454-1.728s0.303-1.577 0.212-1.728c-0.091-0.152-0.334-0.243-0.697-0.425z"/>
+        </svg>
+    </a>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Blessed Sunny Medical Company & De Blessed Sunny Trading Co. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuBtn.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+            });
+
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuBtn.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
